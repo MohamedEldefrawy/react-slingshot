@@ -21,9 +21,9 @@ jobs:
           name: "install"
           command: "npm i"
       - save_cache:
-          paths:
-            - "/src/node_modules"
           key: modules
+          paths:
+            - /src/node_modules
       - run:
           name: "Build"
           command: "npm run lint"
